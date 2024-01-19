@@ -7,7 +7,7 @@
 
     <title>Json Test</title>
   </head>
-  <body class="bg-slate-800 text-white">
+  <body class="bg-slate-800 text-white overflow-hidden">
     <div class="h-screen w-screen flex flex-col items-center" id="login">
       <h1 class="mt-5 text-5xl w-[200px] mb-32">Logg Inn</h1>
       <div>
@@ -25,9 +25,30 @@
         </button>
       </div>
     </div>
-    <div class="w-screen flex flex-col items-center" id="profile">
-      <h1 class="mt-5 text-5xl w-[200px] mb-32" id="name"></h1>
-      <img src="" id="personImage" class="w-[201px] rounded-md" />
+    <div class="w-screen flex flex-col items-center" id="profile" hidden>
+      <h1 class="mt-5 text-5xl w-[200px] mb-10 text-center" id="name"></h1>
+      <img src="" id="personImage" class="w-[201px] rounded-md mb-3" />
+      <div>
+        <input
+          id="password-input"
+          type="password"
+          placeholder="Password"
+          class="w-[200px] rounded-md p-2 text-black"
+        />
+        <button
+          id="submit-button-password"
+          class="w-[100px] bg-blue-400 h-10 rounded-md"
+        >
+          <p>Submit</p>
+        </button>
+      </div>
+    </div>
+    <div id="loggedIn" class="hidden flex justify-center items-center">
+      <h1
+        class="mt-5 text-5xl w-[200px] mb-10 text-center"
+        id="nameLoggedIn"
+      ></h1>
+      <img src="" id="personImageLoggedIn" class="w-[201px] rounded-md mb-3" />
     </div>
     <script src="index.js"></script>
   </body>
